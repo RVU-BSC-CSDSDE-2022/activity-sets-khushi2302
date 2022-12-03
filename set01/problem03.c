@@ -4,7 +4,7 @@ int main(){
 
 	int num1, num2, result;
 
-	/*Accept the numbers from the user*/
+	/*Accept the number from the user*/
 	printf("\nEnter the two number: ");
 	scanf("%d %d", &num1, &num2);
 
