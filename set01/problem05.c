@@ -2,8 +2,9 @@
 int main(){
   int a,b,c;
   a=11;
-  b=22;
-  c=33;
+  b=33;
+  c=55;
+    
     if(a>b && a>c)
     printf("%d is the largest.",a);
   else if (b>a && b>c)
@@ -11,7 +12,8 @@ int main(){
   else if(c>a && c>b)
     printf("%d is the largest.",c);
   else
-      printf("values are not unique");
+    printf("value is not unique");
+
   return 0;
     
 }
