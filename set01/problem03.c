@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int main(){
@@ -9,9 +8,6 @@ int main(){
 	printf("\nEnter the two number: ");
 	scanf("%d %d", &num1, &num2);
 
-	/* Pass the value of num1 and num2 as parameter to function add.
-	    The value returned is stored in the variable result
-	 */
 	result = add(num1, num2);
 	printf("\nAddition of %d and %d is %d", num1, num2, result);
 
