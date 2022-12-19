@@ -1,25 +1,28 @@
 #include <stdio.h>
+int input();
+int add(int a, int b);
+void output(int a, int b, int sum);
 
-int main(){
-
-	int num1, num2, result;
-
-	/*Accept the numbers from the user*/
-	printf("\nEnter the two number: ");
-	scanf("%d %d", &num1, &num2);
-
-	/* Pass the value of num1 and num2 as parameter to function add.
-	    The value returned is stored in the variable result
-	 */
-	result = add(num1, num2);
-	printf("\nAddition of %d and %d is %d", num1, num2, result);
-
-	return 1;
-}
-
-/*Defining the function add()*/
-int add(int no1, int no2)
+int main() {
+  int a,b,sum;
+  a=input();
+  b=input();
+output= a,b,sum;
+  
+int input()
 {
-	int res;
-	res = no1 + no2;
+int digit;
+printf("\n Enter two integer:");
+scanf("%d",digit);
+return digit;
+  }
+int add (int a,int b);
+{
+  int s
+  s=a+b;
+ return s;
+}
+void output(int a,int b,int sum);
+{
+  printf("the sum of the two numberis %d",s);
 }

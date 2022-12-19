@@ -1,22 +1,74 @@
 #include <stdio.h>
+
 struct complex
 {
-   int real, img;
+   float real;
+   float imaginary;
 };
+typedef struct complex Complex;
+int get_n();
+Complex input_complex();
+void input_n_complex(int n , Complex c[n]);
+Complex add(Complex a, Complex b);
+Complex add_n_complex(int n, Complex c[n]);
+void output(int n, Complex c[n], Complex result);
 
 int main()
 {
-   struct complex a, b, c;
+   int n;
+   Complex result={0,0};
+   n=get_n();
+   Complex c[n];
+   input_n_complex(n,c);
+   result=add_n_complex(n,c);
+   return 0;
+}
+int get_n()
+{
+   int n;
+   printf("Enter the size of the array\n");
+  scanf("%d", &n);
+  return n;
+  }
+  
+Complex input_complex()
+{
+  Complex c;
+  printf("Enter the real part\n");
+  scanf("%f", &c.real);
+  printf("Enter the imaginary part\n");
+  scanf("%f", &c.imaginary);
+  return c;
+}
 
-   printf("Enter a and b where a + ib is the first complex number.\n");
-   scanf("%d%d", &a.real, &a.img);
-   printf("Enter c and d where c + id is the second complex number.\n");
-   scanf("%d%d", &b.real, &b.img);
+void input_n_complex(int n , Complex c[n])
+{
+  for(int i=0;i<n;i++)
+    {
+           c[i] =input_complex();
+    }
+}
 
-   c.real = a.real + b.real;
-   c.img = a.img + b.img;
+Complex add(Complex a, Complex b)
+{
 
-   printf("Sum of the complex numbers: (%d) + (%di)\n", c.real, c.img);
+  a.real=a.real+b.real;
+  a.imaginary=a.imaginary+b.imaginary;
+  return a;
+}
+Complex add_n_complex(int n, Complex c[n])
+{
+  Complex sum={0,0};
+  for(int i=0; i<n; i++)
+    }
+    {
+       sum= add(sum, c[i]);
+    }
+void output(int n, Complex c[n], Complex result);
+
+{
+  printf("Sum of the complex numbers: (%d) + (%di)\n", c.real, c.img);
 
    return 0;
 }
+
