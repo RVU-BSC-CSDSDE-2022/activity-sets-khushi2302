@@ -1,21 +1,36 @@
-#include<stdio.h>
-
-// function to find largest among three number
-float large(float a, float b, float c)
-{
-   if(a>=b && a>=c) return a;
-   else if(b>=a && b>=c) return b;
-   else return c;
+#include <stdio.h>
+int input();
+void compare(int a, int b, int c, int *largest);
+void output(int a, int b, int c, int largest);
+int main() {
+  int a, b, c, *largest;
+  a = input();
+  b = input();
+  c = input();
+   compare(a,b,c,&largest);
+  output(a,b,c,largest);
+  return 0;
 }
 
-int main()
-{
-   float num1, num2, num3, largest;
+int input() {
+  int digit;
+  printf("Enter a number: ");
+  scanf("%d", &digit);
+  return digit;
+}
 
-   printf("Enter three numbers: ");
-   scanf("%f %f %f", &num1, &num2, &num3);
+void compare(int a, int b, int c,int *largest) {
+  if(a>b && a>c) {
+    *largest=a;
+  }
+  else if(b>c) {
+    *largest=b;
+  }
+  else {
+    *largest=c;
+}
+  }
 
-   largest = large(num1, num2, num3);
-   printf("the Largest number = %.2f",largest);
-   return 0;
+void output(int a, int b, int c, int largest) {
+  printf("The largest of %d, %d and %d is %d \n", a,b,c,largest);
 }

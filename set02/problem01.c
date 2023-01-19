@@ -1,34 +1,34 @@
-#include <stdio.h>
+#include<stdio.h>
+void input(float base, float height);
+void find_area(float base , float height, float *area);
+void output(float base, float height, float area);
+
+int main(){
+  float base,height,area;
+  input(base,height);
+  
+  // find_area(base,height,&area);
+  // output(base,height,area);
+  return 0;
+  }
+
+void input(float base, float height){
+  printf("Enter the base \n");
+  scanf("%f", &base);
+  printf("Enter the height");
+  scanf("%f",&height);
+  float area;
+  find_area(base,height,&area);
+  output(base,height,area);
+  }
+
+void find_area(float base , float height, float *area){
+  *area=0.5*base*height;
+   
+  
+}
 
 
-int main()
-
-{
-
-float base, height, area;
-
-
-/* Input base and height of triangle */
-
-printf("Enter base of the triangle: ");
-
-scanf("%f", &base);
-
-printf("Enter height of the triangle: ");
-
-scanf("%f", &height);
-
-
-/* Calculate area of triangle */
-
-area = (base * height) / 2;
-
-
-/* Print the resultant area */
-
-printf("Area of the triangle = %.2f sq. units", area);
-
-
-return 0;
-
+void output(float base, float height, float area){
+  printf("The area of triangle is %f",area);
 }
