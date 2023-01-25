@@ -1,12 +1,4 @@
 #include <stdio.h>
-
-struct  complex
-{
-  float real;
-  float imaginary;
-};
-typedef struct complex Complex;
-
 Complex input_complex();
 Complex add_complex(Complex a, Complex b);
 void output(Complex a, Complex b, Complex sum);
